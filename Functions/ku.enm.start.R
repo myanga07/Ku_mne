@@ -1,4 +1,4 @@
-ku.enm.start <- function(file.name = "ku_enm_complete_process"){
+ku.enm.start <- function(file.name){
   sink(paste(file.name, ".Rmd", sep = ""))
   cat(
 "---

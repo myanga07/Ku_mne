@@ -55,14 +55,10 @@ Figure 1. Directory structure and necessary data for getting started with the ku
 **ku.enm** functions are available in a GitHub repository and can be accesed using the following codes.
 
 ``` r
-if(!require(devtools)){
-  install.packages("devtools")
-  library(devtools)
-}
-source_gist("https://github.com/manubio13/ku.enm/blob/master/Functions/ku.enm.start.R")
-source_gist("https://github.com/manubio13/ku.enm/blob/master/Functions/ku.enm.cal.R")
-source_gist("https://github.com/manubio13/ku.enm/blob/master/Functions/ku.enm.eval.R")
-source_gist("https://github.com/manubio13/ku.enm/blob/master/Functions/ku.enm.mod.R")
+source("https://raw.githubusercontent.com/manubio13/ku.enm/master/Functions/ku.enm.start.R")
+source("https://raw.githubusercontent.com/manubio13/ku.enm/master/Functions/ku.enm.cal.R")
+source("https://raw.githubusercontent.com/manubio13/ku.enm/master/Functions/ku.enm.eval.R")
+source("https://raw.githubusercontent.com/manubio13/ku.enm/master/Functions/ku.enm.mod.R")
 ```
 
 <br>
