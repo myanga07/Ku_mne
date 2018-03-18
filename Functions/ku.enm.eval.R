@@ -608,7 +608,6 @@ ku.enm.eval <- function(path, occ.all, occ.tra, occ.test, batch, out.eval, omi.v
       ")
   sink()
   render(paste(dnam, "evaluation_results.Rmd", sep = "/"), "html_document", quiet = TRUE)
-  unlink(paste(dnam, "evaluation_results.Rmd", sep = "/"))
   
   #####
   #Finalizing the function
