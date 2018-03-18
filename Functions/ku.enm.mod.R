@@ -19,7 +19,7 @@ ku.enm.mod <- function(occ.all, M.var.dir, out.eval, rep.n = 10, rep.type = "Boo
   #####
   #Data
   ##Data from best models table
-  best <- list.files(path = out.eval, pattern = "best")
+  best <- list.files(path = out.eval, pattern = "best", full.names = TRUE)
   sett <- read.csv(best)
   sett1 <- as.character(sett[,1])
   setts <- strsplit(sett1, split = "_")
