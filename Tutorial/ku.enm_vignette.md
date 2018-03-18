@@ -145,13 +145,13 @@ Maxent will run in command-line interface like when creating calibration models 
 ``` r
 #Variables with information to be used as arguments
 mod_dir <- "Final_Models"
-G_var_dir <- "G_variabless"
+G_var_dir <- "G_variables"
 ##Most of the variables used here as arguments were already created for the previous function
 ```
 
 ``` r
 ku.enm.mod(occ.all = occ_all, M.var.dir = M_var_dir, out.eval = out_eval, rep.n = 10, rep.type = "Bootstrap", 
-           out.dir = mod_dir, out.format = "logistic", project = TRUE, G.var.dir, 
+           out.dir = mod_dir, out.format = "logistic", project = TRUE, G.var.dir = G_var_dir, 
            ext.type = "all", write.mess = FALSE, write.clamp = FALSE)
 ```
 
