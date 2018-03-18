@@ -1,5 +1,6 @@
 ku.enm.cal <- function(occ.all, occ.tra, M.var.dir, batch,
                        out.dir, reg.mult, f.clas = "all"){
+  
   #Funtion to get free ram 
   get_free_ram <- function(){
     if(Sys.info()[["sysname"]] == "Windows"){

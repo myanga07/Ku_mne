@@ -16,11 +16,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Introduction
 
-**ku.enm** is an R package designed to make the process of model calibration and final model creation easier and reproducible, but at the same time more robust. 
+**ku.enm** is an R package designed to make the process of model calibration and final model creation easier and reproducible, but at the same time more robust. The main amin of this package is perform detailed calibrations of Maxent models to select the best parametrizations for each study. Another objective of this program is to make the task of creating final models and their projections easear.
 
-This is a brief tutorial for using the functions of the **ku.enm** R package. An example of a disease vector is used in this tutorial to make it more reliable.
-
-Since the package is still under development functions help can be checked while performing the processess. 
+This is a brief tutorial for using the functions of the **ku.enm** R package. An example of a disease vector is used in this tutorial to make it more reliable. Since the package is still under development, functions help can be checked while performing the processes. 
 
 <br>
 
@@ -76,11 +74,12 @@ Once the working diretory and data are ready, the function *ku.enm.start* (.Rmd)
 The only argument for the *ku.enm.start* function is file.name, it is the name of the markdown file that will be created for guiding and recording all your codes.
 
 ```{r}
-#Preparing variables to be used in arguments
+#Preparing variables to be used as arguments
 file_name = "ku_enm_complete_process"
 ```
 
 ```{r, eval=FALSE, include=TRUE}
+#Starting analyses
 ku.enm.start(file.name = file_name)
 ```
 <br>

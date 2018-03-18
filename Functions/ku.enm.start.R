@@ -1,4 +1,10 @@
 ku.enm.start <- function(file.name){
+  
+  if(!require(rmarkdown)){
+    install.packages("rmarkdown")
+    library(rmarkdown)
+  }
+  
   sink(paste(file.name, ".Rmd", sep = ""))
   cat(
 "---
