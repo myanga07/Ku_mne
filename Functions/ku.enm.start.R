@@ -108,18 +108,18 @@ Arguments explanation for *ku.enm.mod*:
 - write.mess (logical) if TRUE, grids of MESS analysis results will be written, default = FALSE
 - write.clamp (logical) if TRUE, a grid of the spatial distribution of clamping will be written, default = FALSE
 
-\```{r, eval=FALSE, include=TRUE}
+\```{r}
 #Variables with information to be used as arguments
 mod_dir <- \"Final_Models\"
-G_var_dir <- \"G_variabless\"
+G_var_dir <- \"G_variables\"
 ##Most of the variables used here as arguments were already created for the previous function
 \```
 
 The *ku.enm.mod* function has the following syntax:
 
-\```{r, eval=FALSE, include=TRUE}
+\```{r}
 ku.enm.mod(occ.all = occ_all, M.var.dir = M_var_dir, out.eval = out_eval, rep.n = 10, rep.type = \"Bootstrap\", 
-out.dir = mod_dir, out.format = \"logistic\", project = TRUE, G.var.dir, 
+out.dir = mod_dir, out.format = \"logistic\", project = TRUE, G.var.dir = G_var_dir, 
 ext.type = \"all\", write.mess = FALSE, write.clamp = FALSE)
 \```"
   )
