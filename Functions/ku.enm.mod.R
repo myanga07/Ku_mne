@@ -39,7 +39,7 @@ ku.enm.mod <- function(occ.all, M.var.dir, out.eval, rep.n = 10, rep.type = "Boo
   ###Calibration (M) variables
   var.di <- vector()
   for (i in 1:length(setts)) {
-    var.di[i] <- setts[[i]][5]
+    var.di[i] <- paste(setts[[i]][5], setts[[i]][6], sep = "_")
   }
   var.dir <- paste(M.var.dir, var.di, sep = "\\")
   
