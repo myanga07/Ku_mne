@@ -510,9 +510,9 @@ ku.enm.eval <- function(path, occ.all, occ.tra, occ.test, batch, out.eval, omi.v
   cat("---
 title: \"ku.enm: evaluation results\"
 output:
-html_document:
-toc: true
-toc_depth: 4
+  html_document:
+      toc: true
+      toc_depth: 4
 ---
 
 \```{r setup, include=FALSE}
@@ -537,7 +537,7 @@ f.clas[i] <- setts[[i]][4]
 }
 var.di <- vector()
 for (i in 1:length(setts)) {
-var.di[i] <- setts[[i]][5]
+var.di[i] <- paste(setts[[i]][5:length(setts[[i]])], collapse = \"_\")
 }
 rm1 <- paste(unique(rm), collapse = \", \")
 f.clas1 <- paste(unique(f.clas), collapse = \", \")
@@ -556,7 +556,7 @@ knitr::kable(par, digits=c(0,0), row.names = TRUE, caption = \"Table 1. Paramete
 \```
 
 <br>
-All the results presented below can be found in the folder \"ku_enm_evaluation_results\" for further analyses.
+All the results presented below can be found in the evaluation output folder for further analyses.
 
 <br>
 <br>
@@ -567,6 +567,7 @@ In the following table you are going to find information about how many models m
 
 \```{r, echo=FALSE}
 st <- read.csv(\"evaluation_stats.csv\")
+colnames(st) <- c(\"Criteria\",	\"Number_of_models\")
 knitr::kable(st, digits=c(0,0), caption = \"Table 2. General statistics of models that meet distinct criteria.\")
 \```
 
@@ -582,6 +583,7 @@ Notice that if the selection criterion was, models with the best Omission rates 
 \```{r, echo=FALSE}
 best <- list.files(pattern = \"best\")
 st1 <- read.csv(best)
+colnames(st1) <- c(\"Model\",	\"Mean_AUC_ratio\",	\"Partial_ROC\", \"Ommission_rate_5%\", \"AICc\",	\"delta_AICc\",	\"W_AICc\",	\"num_parameters\")
 knitr::kable(st1, digits=c(0,3,3,3,3,3,3,0), caption = \"Table 3. Performance statistics of the best models selected based on the pre-defined critera.\")
 \```
 
@@ -603,11 +605,13 @@ Following you will find the performance statistics for all the calibration model
 
 \```{r, echo=FALSE}
 st4 <- read.csv(\"evaluation_results.csv\")
+colnames(st4) <-  c(\"Model\",	\"Mean_AUC_ratio\",	\"Partial_ROC\", \"Ommission_rate_5%\", \"AICc\",	\"delta_AICc\",	\"W_AICc\",	\"num_parameters\")
 knitr::kable(st4, digits=c(0,3,3,3,3,3,3,0), caption = \"Table 4. Performance statistics of all the calibration models.\")
 \```
       ")
   sink()
   render(paste(dnam, "evaluation_results.Rmd", sep = "/"), "html_document", quiet = TRUE)
+  unlink(paste(dnam, "evaluation_results.Rmd", sep = "/"))
   
   #####
   #Finalizing the function
