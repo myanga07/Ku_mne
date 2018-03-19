@@ -508,7 +508,7 @@ ku.enm.eval <- function(path, occ.all, occ.tra, occ.test, batch, out.eval, omi.v
   ###Writing the html file
   sink(paste(dnam, "evaluation_results.Rmd", sep = "/"))
   cat("---
-      title: \"<center> <h0>ku.enm: evaluation results</h0> </center>\"
+      title: \"ku.enm: evaluation results\"
       output:
       html_document:
       toc: true
