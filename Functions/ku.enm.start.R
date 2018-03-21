@@ -104,7 +104,7 @@ Arguments explanation for *ku.enm.mod*:
 - out.format (character) is the models output format, can be: \"raw\", \"logistic\", \"cloglog\", \"cumulative\"
 - project (logical) if TRUE your models will be projected to the scenarios in G.var.dir, default = FALSE
 - G.var.dir (character) if project is TRUE, name of the forlder containing folders in wich variables of your projection scenarios are
-- ext.type (character) if project is TRUE, is the extrapolation type of projections, can be: \"all\", \"ext_clam\", \"ext\", and \"no_ext\", default = \"all\"
+- ext.type (character) if project is TRUE, is the extrapolation type of projections, can be: \"all\", \"ext_clam\", \"ext\", and \"no_ext\", default = \"all\". ext = free extrapolation, ext_clam = extrapolation and clamping, no_ext = no extrapolation, and all = all the three previous options
 - write.mess (logical) if TRUE, grids of MESS analysis results will be written, default = FALSE
 - write.clamp (logical) if TRUE, a grid of the spatial distribution of clamping will be written, default = FALSE
 
