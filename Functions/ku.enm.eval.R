@@ -444,7 +444,7 @@ ku.enm.eval <- function(path, occ.all, occ.tra, occ.test, batch, out.eval, omi.v
   #Writing the results
   ##csv files
   cat("\nWriting ku.enm.eval results...\n")
-  dnam <- "ku_enm_evaluation_results"
+  dnam <- out.eval
   dir.create(dnam)
   
   name <- paste(dnam, "evaluation_results.csv", sep = "/")
