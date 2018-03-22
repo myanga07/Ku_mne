@@ -122,7 +122,7 @@ ku.enm.cal <- function(occ.all, occ.tra, M.var.dir, batch,
   suppressMessages(close(pb))
   
   cat("\nIf asked, allow runing as administrator.")
-  shell.exec(file.path(getwd(), "ku_enm_calibration_models.bat"))
+  shell.exec(file.path(getwd(), paste(batch, ".bat", sep = "")))
   
   cat("\nProcess finished\n")
   cat(paste("A maxent batch file for creating", i * j * k, "calibration models has been written", sep = " "))
